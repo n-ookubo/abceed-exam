@@ -17,6 +17,7 @@
 		B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */; };
 		B98CFAA728FB57780002D7B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA628FB57780002D7B9 /* Alamofire */; };
 		B98CFAAA28FB57B00002D7B9 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA928FB57B00002D7B9 /* AlamofireImage */; };
+		B98CFAAC28FB58E60002D7B9 /* NetworkLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B98CFA9528FB525D0002D7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98CFA9728FB525D0002D7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbceedExtension.swift; sourceTree = "<group>"; };
+		B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		B98CFAA228FB55DC0002D7B9 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98CFA8E28FB525C0002D7B9 /* ViewController.swift in Sources */,
+				B98CFAAC28FB58E60002D7B9 /* NetworkLib.swift in Sources */,
 				B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */,
 				B98CFA8A28FB525C0002D7B9 /* AppDelegate.swift in Sources */,
 				B98CFA8C28FB525C0002D7B9 /* SceneDelegate.swift in Sources */,
