@@ -18,6 +18,8 @@
 		B98CFAA728FB57780002D7B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA628FB57780002D7B9 /* Alamofire */; };
 		B98CFAAA28FB57B00002D7B9 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA928FB57B00002D7B9 /* AlamofireImage */; };
 		B98CFAAC28FB58E60002D7B9 /* NetworkLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */; };
+		B98CFAB328FB6C000002D7B9 /* UILib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAB228FB6C000002D7B9 /* UILib.swift */; };
+		B98CFAB528FB72FA0002D7B9 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAB428FB72FA0002D7B9 /* IndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		B98CFA9728FB525D0002D7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbceedExtension.swift; sourceTree = "<group>"; };
 		B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLib.swift; sourceTree = "<group>"; };
+		B98CFAB228FB6C000002D7B9 /* UILib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILib.swift; sourceTree = "<group>"; };
+		B98CFAB428FB72FA0002D7B9 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				B98CFA8D28FB525C0002D7B9 /* ViewController.swift */,
+				B98CFAB228FB6C000002D7B9 /* UILib.swift */,
+				B98CFAB428FB72FA0002D7B9 /* IndicatorView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -185,7 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98CFA8E28FB525C0002D7B9 /* ViewController.swift in Sources */,
+				B98CFAB328FB6C000002D7B9 /* UILib.swift in Sources */,
 				B98CFAAC28FB58E60002D7B9 /* NetworkLib.swift in Sources */,
+				B98CFAB528FB72FA0002D7B9 /* IndicatorView.swift in Sources */,
 				B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */,
 				B98CFA8A28FB525C0002D7B9 /* AppDelegate.swift in Sources */,
 				B98CFA8C28FB525C0002D7B9 /* SceneDelegate.swift in Sources */,
