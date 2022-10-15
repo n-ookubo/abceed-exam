@@ -13,6 +13,8 @@
 		B98CFA9128FB525C0002D7B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98CFA8F28FB525C0002D7B9 /* Main.storyboard */; };
 		B98CFA9328FB525D0002D7B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98CFA9228FB525D0002D7B9 /* Assets.xcassets */; };
 		B98CFA9628FB525D0002D7B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98CFA9428FB525D0002D7B9 /* LaunchScreen.storyboard */; };
+		B98CFA9F28FB53CD0002D7B9 /* AbceedUILibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */; };
+		B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		B98CFA9228FB525D0002D7B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B98CFA9528FB525D0002D7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98CFA9728FB525D0002D7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbceedExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98CFA9F28FB53CD0002D7B9 /* AbceedUILibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,40 @@
 		B98CFA8828FB525C0002D7B9 /* abceed-exam */ = {
 			isa = PBXGroup;
 			children = (
-				B98CFA8928FB525C0002D7B9 /* AppDelegate.swift */,
-				B98CFA8B28FB525C0002D7B9 /* SceneDelegate.swift */,
-				B98CFA8D28FB525C0002D7B9 /* ViewController.swift */,
+				B98CFAA028FB55980002D7B9 /* Sources */,
 				B98CFA8F28FB525C0002D7B9 /* Main.storyboard */,
 				B98CFA9228FB525D0002D7B9 /* Assets.xcassets */,
 				B98CFA9428FB525D0002D7B9 /* LaunchScreen.storyboard */,
 				B98CFA9728FB525D0002D7B9 /* Info.plist */,
 			);
 			path = "abceed-exam";
+			sourceTree = "<group>";
+		};
+		B98CFAA028FB55980002D7B9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B98CFAA228FB55DC0002D7B9 /* Logic */,
+				B98CFAA128FB55CA0002D7B9 /* UI */,
+				B98CFA8928FB525C0002D7B9 /* AppDelegate.swift */,
+				B98CFA8B28FB525C0002D7B9 /* SceneDelegate.swift */,
+				B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B98CFAA128FB55CA0002D7B9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B98CFA8D28FB525C0002D7B9 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B98CFAA228FB55DC0002D7B9 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +112,9 @@
 			dependencies = (
 			);
 			name = "abceed-exam";
+			packageProductDependencies = (
+				B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */,
+			);
 			productName = "abceed-exam";
 			productReference = B98CFA8628FB525C0002D7B9 /* abceed-exam.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +143,9 @@
 				Base,
 			);
 			mainGroup = B98CFA7D28FB525C0002D7B9;
+			packageReferences = (
+				B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */,
+			);
 			productRefGroup = B98CFA8728FB525C0002D7B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98CFA8E28FB525C0002D7B9 /* ViewController.swift in Sources */,
+				B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */,
 				B98CFA8A28FB525C0002D7B9 /* AppDelegate.swift in Sources */,
 				B98CFA8C28FB525C0002D7B9 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globeejp/abceed-UIComponents";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */;
+			productName = AbceedUILibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B98CFA7E28FB525C0002D7B9 /* Project object */;
 }
