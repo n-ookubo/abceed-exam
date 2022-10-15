@@ -15,6 +15,8 @@
 		B98CFA9628FB525D0002D7B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98CFA9428FB525D0002D7B9 /* LaunchScreen.storyboard */; };
 		B98CFA9F28FB53CD0002D7B9 /* AbceedUILibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */; };
 		B98CFAA428FB561C0002D7B9 /* AbceedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAA328FB561C0002D7B9 /* AbceedExtension.swift */; };
+		B98CFAA728FB57780002D7B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA628FB57780002D7B9 /* Alamofire */; };
+		B98CFAAA28FB57B00002D7B9 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFAA928FB57B00002D7B9 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98CFA9F28FB53CD0002D7B9 /* AbceedUILibrary in Frameworks */,
+				B98CFAA728FB57780002D7B9 /* Alamofire in Frameworks */,
+				B98CFAAA28FB57B00002D7B9 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,8 @@
 			name = "abceed-exam";
 			packageProductDependencies = (
 				B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */,
+				B98CFAA628FB57780002D7B9 /* Alamofire */,
+				B98CFAA928FB57B00002D7B9 /* AlamofireImage */,
 			);
 			productName = "abceed-exam";
 			productReference = B98CFA8628FB525C0002D7B9 /* abceed-exam.app */;
@@ -145,6 +151,8 @@
 			mainGroup = B98CFA7D28FB525C0002D7B9;
 			packageReferences = (
 				B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */,
+				B98CFAA528FB57780002D7B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B98CFAA828FB57B00002D7B9 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = B98CFA8728FB525C0002D7B9 /* Products */;
 			projectDirPath = "";
@@ -402,6 +410,22 @@
 				kind = branch;
 			};
 		};
+		B98CFAA528FB57780002D7B9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		B98CFAA828FB57B00002D7B9 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -409,6 +433,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */;
 			productName = AbceedUILibrary;
+		};
+		B98CFAA628FB57780002D7B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98CFAA528FB57780002D7B9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B98CFAA928FB57B00002D7B9 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98CFAA828FB57B00002D7B9 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
