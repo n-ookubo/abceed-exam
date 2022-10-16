@@ -18,7 +18,7 @@ class BookDetailListView : UICollectionView {
         let layout = BookDetailListView.createBookDetailViewLayout()
         super.init(frame: frame, collectionViewLayout: layout)
         
-        backgroundColor = Abceed.monotone8
+        backgroundColor = Abceed.monotone6
         register(BookCell.self, forCellWithReuseIdentifier: BookCell.ReuseIdentifier)
         configureDataSource()
     }
@@ -40,13 +40,7 @@ class BookDetailListView : UICollectionView {
         let cellRegistration = UICollectionView.CellRegistration<BookDetailCell, BookWrapper> {
             (cell, indexPath, data) in
             // configure cell
-            /*
-            cell.configureCell(book: data) {
-                var snapshot = self.bookViewDataSource.snapshot()
-                snapshot.reconfigureItems([data])
-                self.bookViewDataSource.apply(snapshot)
-            }
-            */
+            cell.configureCell(data: data)
         }
         
         bookDetailDataSource = DataSourceType(collectionView: self) {
