@@ -8,11 +8,20 @@
 import AbceedUILibrary
 import UIKit
 
+protocol BookDetailListViewDelegate {
+    func myBooksUpdateButtonPressed(of: BookWrapper?)
+}
+
 class BookDetailListView : UICollectionView {
     public typealias DataSourceType = UICollectionViewDiffableDataSource<Int, BookWrapper>
     
     private var bookDetailDataSource: DataSourceType!
     private var bookData: BookWrapper?
+    private var myBooksDelegate_: BookDetailListViewDelegate?
+    public var myBooksDelegate : BookDetailListViewDelegate? {
+        get { return myBooksDelegate_ }
+        set { myBooksDelegate_ = newValue }
+    }
     
     init(frame: CGRect = .zero) {
         let layout = BookDetailListView.createBookDetailViewLayout()
@@ -36,11 +45,23 @@ class BookDetailListView : UICollectionView {
         bookDetailDataSource.apply(snapshot)
     }
     
+    public func refresh() {
+        guard let book = bookData else { return }
+        var snapshot = bookDetailDataSource.snapshot()
+        snapshot.reconfigureItems([book])
+        bookDetailDataSource.apply(snapshot)
+    }
+    
     private func configureDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<BookDetailCell, BookWrapper> {
             (cell, indexPath, data) in
             // configure cell
-            cell.configureCell(data: data)
+            cell.configureCell(data: data) {
+                book in
+                if let delegate = self.myBooksDelegate {
+                    delegate.myBooksUpdateButtonPressed(of: book)
+                }
+            }
         }
         
         bookDetailDataSource = DataSourceType(collectionView: self) {

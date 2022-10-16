@@ -32,6 +32,7 @@
 		B98CFAC928FBE9A10002D7B9 /* TestButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */; };
 		B98CFACC28FC38E30002D7B9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFACB28FC38E30002D7B9 /* Realm */; };
 		B98CFACE28FC38E30002D7B9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFACD28FC38E30002D7B9 /* RealmSwift */; };
+		B98CFAD028FC39270002D7B9 /* RealmLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFACF28FC39270002D7B9 /* RealmLib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B98CFAC428FBAAC60002D7B9 /* BookDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailListViewController.swift; sourceTree = "<group>"; };
 		B98CFAC628FBE8E80002D7B9 /* BookTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTestView.swift; sourceTree = "<group>"; };
 		B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonView.swift; sourceTree = "<group>"; };
+		B98CFACF28FC39270002D7B9 /* RealmLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				B98CFAAB28FB58E60002D7B9 /* NetworkLib.swift */,
 				B98CFABC28FB83820002D7B9 /* ImageSizeCache.swift */,
+				B98CFACF28FC39270002D7B9 /* RealmLib.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				B98CFA8A28FB525C0002D7B9 /* AppDelegate.swift in Sources */,
 				B98CFAC128FBA6210002D7B9 /* BookDetailCell.swift in Sources */,
 				B98CFA8C28FB525C0002D7B9 /* SceneDelegate.swift in Sources */,
+				B98CFAD028FC39270002D7B9 /* RealmLib.swift in Sources */,
 				B98CFABB28FB7E220002D7B9 /* BookSubCategoryView.swift in Sources */,
 				B98CFABD28FB83820002D7B9 /* ImageSizeCache.swift in Sources */,
 				B98CFAC528FBAAC60002D7B9 /* BookDetailListViewController.swift in Sources */,

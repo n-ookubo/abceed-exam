@@ -22,6 +22,8 @@ class BookDetailListViewController : UIViewController {
         set { bookData = newValue }
     }
     
+    private var processing: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +32,8 @@ class BookDetailListViewController : UIViewController {
                 
         self.navigationController?.navigationBar.tintColor = Abceed.monotone1
         self.navigationItem.rightBarButtonItem = deleteButtonItem
+        
+        bookDetailListView.myBooksDelegate = self
         
         if let book = bookData {
             bookDetailListView.setBookData(data: book)
@@ -44,5 +48,28 @@ class BookDetailListViewController : UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        processing = false
+    }
+}
+
+extension BookDetailListViewController : BookDetailListViewDelegate {
+    func myBooksUpdateButtonPressed(of: BookWrapper?) {
+        guard let book = of else { return }
+        let bookId = book.book.id_book
+        guard processing == false else { return }
+        processing = true
+        UILib.showIndicatorView()
+        let curStatus = RealmLib.isMyBooks(bookId: bookId)
+        let newStatus = !curStatus
+        RealmLib.updateMyBooks(bookId: bookId, status: newStatus)
+        bookDetailListView.refresh()
+        UILib.removeIndicatorView()
+        let message = newStatus ? "MyBookへ追加しました。" : "MyBookから削除しました。"
+        let dialog = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+            _ in
+            self.processing = false
+        }))
+        self.present(dialog, animated: true)
     }
 }

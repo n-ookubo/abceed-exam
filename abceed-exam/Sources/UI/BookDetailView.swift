@@ -40,6 +40,7 @@ class BookDetailView : UIView {
     private let buttonRight: UIButton!
     
     private var bookData: BookWrapper?
+    private var myBooksHandler: ((BookWrapper?)->Void)?
     
     override init(frame: CGRect) {
         imageView = {
@@ -91,6 +92,13 @@ class BookDetailView : UIView {
         
         super.init(frame: frame)
         
+        buttonLeft.addAction(.init {
+            _ in
+            if let handler = self.myBooksHandler {
+                handler(self.bookData)
+            }
+        }, for: .primaryActionTriggered)
+        
         configureLayout()
     }
     
@@ -98,8 +106,9 @@ class BookDetailView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureView(book: BookWrapper) {
-        bookData = book        
+    func configureView(book: BookWrapper, handler: ((BookWrapper?)->Void)?) {
+        bookData = book
+        myBooksHandler = handler
         
         let initialImageHeight = calcImageHeight()
         let imageHeight = initialImageHeight ?? BookDetailView.bookImageWidth
@@ -118,7 +127,13 @@ class BookDetailView : UIView {
         bookNameLabel.text = book.book.name_book
         authorLabel.text = book.book.author
         publisherLabel.text = book.book.publisher
-        debugPrint(book)
+        
+        let isMyBooks = RealmLib.isMyBooks(bookId: book.book.id_book)
+        if isMyBooks {
+            buttonLeft.configuration = UI.buttonConfig(style: .gray, title: BookDetailView.leftButtonTitleSelected)
+        } else {
+            buttonLeft.configuration = UI.buttonConfig(style: .redBorder, title: BookDetailView.leftButtonTitle)
+        }
     }
     
     func resetView() {

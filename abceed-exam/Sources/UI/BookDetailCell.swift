@@ -61,10 +61,10 @@ class BookDetailCell : UICollectionViewCell {
         return layoutAttributes
     }
     
-    func configureCell(data: BookWrapper) {
+    func configureCell(data: BookWrapper, handler: ((BookWrapper?)->Void)?) {
         bookData = data
         
-        detailView.configureView(book: data)
+        detailView.configureView(book: data, handler: handler)
     }
     private func setupLayout() {
         detailViewContainer.addSubviewManual(detailView)
