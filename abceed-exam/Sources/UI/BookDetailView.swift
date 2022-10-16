@@ -186,7 +186,7 @@ class BookDetailView : UIView {
             // buttonStackView size
             buttonStackView.heightAnchor.constraint(equalToConstant: BookDetailView.buttonHeight),
             // bottom
-            buttonStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -BookDetailView.inset).priority(.defaultLow),
+            buttonStackView.bottomAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -BookDetailView.inset).priority(.defaultLow),
             imageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -BookDetailView.inset)
         ])
     }

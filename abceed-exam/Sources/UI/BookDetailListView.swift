@@ -18,7 +18,7 @@ class BookDetailListView : UICollectionView {
         let layout = BookDetailListView.createBookDetailViewLayout()
         super.init(frame: frame, collectionViewLayout: layout)
         
-        backgroundColor = Abceed.monotone6
+        backgroundColor = Abceed.monotone8
         register(BookCell.self, forCellWithReuseIdentifier: BookCell.ReuseIdentifier)
         configureDataSource()
     }

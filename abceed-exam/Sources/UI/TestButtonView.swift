@@ -27,7 +27,8 @@ class TestButtonView : UIView {
         super.init(frame: frame)
         
         backgroundColor = Abceed.monotone8
-        layer.borderColor = Abceed.monotone5.cgColor
+        layer.borderColor = Abceed.monotone6.cgColor
+        layer.borderWidth = 1.0
         layer.cornerRadius = TestButtonView.inset
         
         configureLayout()

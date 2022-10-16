@@ -54,19 +54,5 @@ class BookTestView : UIView {
         verticalStackView.addArrangedSubview(lowerStackView)
         
         constrainSubview(verticalStackView, horizontal: BookTestView.inset, vertical: BookTestView.inset)
-        /*
-        NSLayoutConstraint.activate([
-            upperStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: BookTestView.inset / 2.0),
-            upperStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: BookTestView.inset),
-            upperStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -BookTestView.inset),
-            upperStackView.bottomAnchor.constraint(equalTo: lowerStackView.topAnchor, constant: BookTestView.inset),
-            lowerStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: BookTestView.inset),
-            lowerStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -BookTestView.inset),
-            lowerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -BookTestView.inset / 2.0),
-            //upperStackView.heightAnchor.constraint(equalToConstant: TestButtonView.buttonSize + BookTestView.inset),
-            //lowerStackView.heightAnchor.constraint(equalToConstant: TestButtonView.buttonSize + BookTestView.inset),
-            heightAnchor.constraint(equalToConstant: TestButtonView.buttonSize  * 2.0 + BookTestView.inset * 3.0)
-        ])
-         */
     }
 }
