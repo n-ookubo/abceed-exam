@@ -26,8 +26,7 @@ class UILib {
         
         indicatorLock.lock()
         if indicatorVisible == false {
-            indicatorView.translatesAutoresizingMaskIntoConstraints = false
-            window.addSubview(indicatorView)
+            window.addSubviewManual(indicatorView)
             
             indicatorViewConstraints = window.createSubviewConstraint(indicatorView)
             NSLayoutConstraint.activate(indicatorViewConstraints)
@@ -50,6 +49,13 @@ class UILib {
             indicatorVisible = false
         }
         indicatorLock.unlock()
+    }
+}
+
+extension UIView {
+    func addSubviewManual(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
     }
 }
 

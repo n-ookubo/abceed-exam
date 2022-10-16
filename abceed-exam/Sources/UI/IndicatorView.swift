@@ -19,13 +19,11 @@ class IndicatorView : UIView {
         self.backgroundColor = Abceed.monotone1.withAlphaComponent(0.4)
         
         indicator.hidesWhenStopped = false
-        indicator.translatesAutoresizingMaskIntoConstraints = false
         
         containerView.backgroundColor = Abceed.monotone4
         containerView.layer.cornerRadius = 10
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.addSubview(indicator)
-        self.addSubview(containerView)
+        containerView.addSubviewManual(indicator)
+        self.addSubviewManual(containerView)
         
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
