@@ -28,6 +28,8 @@
 		B98CFAC128FBA6210002D7B9 /* BookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC028FBA6210002D7B9 /* BookDetailCell.swift */; };
 		B98CFAC328FBA9F90002D7B9 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC228FBA9F90002D7B9 /* BookDetailView.swift */; };
 		B98CFAC528FBAAC60002D7B9 /* BookDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC428FBAAC60002D7B9 /* BookDetailListViewController.swift */; };
+		B98CFAC728FBE8E80002D7B9 /* BookTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC628FBE8E80002D7B9 /* BookTestView.swift */; };
+		B98CFAC928FBE9A10002D7B9 /* TestButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		B98CFAC028FBA6210002D7B9 /* BookDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailCell.swift; sourceTree = "<group>"; };
 		B98CFAC228FBA9F90002D7B9 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		B98CFAC428FBAAC60002D7B9 /* BookDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailListViewController.swift; sourceTree = "<group>"; };
+		B98CFAC628FBE8E80002D7B9 /* BookTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTestView.swift; sourceTree = "<group>"; };
+		B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				B98CFAC028FBA6210002D7B9 /* BookDetailCell.swift */,
 				B98CFAC228FBA9F90002D7B9 /* BookDetailView.swift */,
 				B98CFAC428FBAAC60002D7B9 /* BookDetailListViewController.swift */,
+				B98CFAC628FBE8E80002D7B9 /* BookTestView.swift */,
+				B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 				B98CFAB928FB7C190002D7B9 /* BookCell.swift in Sources */,
 				B98CFA8E28FB525C0002D7B9 /* BookListViewController.swift in Sources */,
 				B98CFAB328FB6C000002D7B9 /* UILib.swift in Sources */,
+				B98CFAC928FBE9A10002D7B9 /* TestButtonView.swift in Sources */,
+				B98CFAC728FBE8E80002D7B9 /* BookTestView.swift in Sources */,
 				B98CFAAC28FB58E60002D7B9 /* NetworkLib.swift in Sources */,
 				B98CFABF28FBA4B40002D7B9 /* BookDetailListView.swift in Sources */,
 				B98CFAB528FB72FA0002D7B9 /* IndicatorView.swift in Sources */,

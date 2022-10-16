@@ -117,6 +117,14 @@ extension UI {
     }
 }
 
+extension UI {
+    static func testButton(type: BookTestType) -> TestButtonView {
+        let button = TestButtonView(frame: .zero)
+        button.configureView(type: type)
+        return button
+    }
+}
+
 extension UIView {
     func addSubviewManual(_ view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
