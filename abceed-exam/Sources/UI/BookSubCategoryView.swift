@@ -5,17 +5,22 @@
 //  Created by Naoaki Okubo on 2022/10/16.
 //
 
+import AbceedUILibrary
 import UIKit
 
 class BookSubCategoryView : UICollectionReusableView {
-    private let label: UILabel = UILabel()
+    private let label: UILabel!
     
     override init(frame: CGRect) {
+        label = {
+            let label = UI.label(18, weight: .bold, color: Abceed.monotone1)
+            label.baselineAdjustment = .alignCenters
+            label.adjustsFontForContentSizeCategory = true
+            return label
+        }()
+        
         super.init(frame: frame)
         
-        label.baselineAdjustment = .alignCenters
-        label.adjustsFontForContentSizeCategory = true
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
         constrainSubview(label, horizontal: BookListView.bookCategoryInset)
     }
     

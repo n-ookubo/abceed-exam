@@ -12,7 +12,7 @@ class BookListView : UICollectionView {
     public typealias DataSourceType = UICollectionViewDiffableDataSource<SubCategory, BookWrapper>
     
     static let bookCategoryElementKind: String = "sub-category-header-element-kind"
-    static let bookCategoryHeight: CGFloat = 44.0
+    static let bookCategoryHeight: CGFloat = 32.0
     static let bookCategoryInset: CGFloat = 10.0
     static let bookCellHeight: CGFloat = 160.0
     static let bookCellInset: CGFloat = 5.0
