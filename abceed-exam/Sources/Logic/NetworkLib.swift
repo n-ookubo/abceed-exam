@@ -7,12 +7,14 @@
 
 import Alamofire
 import AlamofireImage
+import Foundation
 
 class NetworkLib {
     static let apiBaseURL = "https://2zw3cqudp7.execute-api.ap-northeast-1.amazonaws.com/dev/"
     static let apiBookAll = "mock/book/all"
     
     private static var downloader_ = {
+        ImageResponseSerializer.addAcceptableImageContentTypes(["binary/octet-stream"])
         return ImageDownloader(
             configuration: ImageDownloader.defaultURLSessionConfiguration(),
             downloadPrioritization: .fifo,
@@ -29,6 +31,10 @@ class NetworkLib {
         let url = apiBaseURL + apiBookAll
         AF.request(url, method: .get)
             .validate()
-            .responseDecodable(of: TopCategoryList.self, completionHandler: completionHandler)
+            .responseDecodable(of: TopCategoryList.self) {response in
+                DispatchQueue.main.async {
+                    completionHandler(response)
+                }
+            }
     }
 }
