@@ -12,12 +12,15 @@ class BookListViewController: UIViewController {
     private let bookListView: BookListView = BookListView()
     private var categoryList: TopCategoryList?
     
+    private var processing: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        bookListView.delegate = self
         view.constrainSubview(bookListView)
-        
+                
+        self.navigationItem.title = "書籍詳細"
         
         UILib.showIndicatorView()
         NetworkLib.getAllBook { (response: DataResponse<TopCategoryList, AFError>) in
@@ -49,6 +52,27 @@ class BookListViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.processing = false
+    }
 
+}
+
+extension BookListViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        guard let bookListView = collectionView as? BookListView else { return }
+        guard let item = bookListView.itemIdentifier(for: indexPath) else { return }
+        guard processing == false else { return }
+        
+        processing = true
+        
+        UILib.showIndicatorView()
+        
+        let controller = BookDetailListViewController()
+        controller.book = item
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 

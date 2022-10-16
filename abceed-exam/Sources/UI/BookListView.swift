@@ -45,6 +45,10 @@ class BookListView : UICollectionView {
         bookViewDataSource.apply(snapshot)
     }
     
+    public func itemIdentifier(for indexPath: IndexPath) -> BookWrapper? {
+        return bookViewDataSource.itemIdentifier(for: indexPath)
+    }
+    
     private func configureDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<BookCell, BookWrapper> {
             (cell, indexPath, data) in
