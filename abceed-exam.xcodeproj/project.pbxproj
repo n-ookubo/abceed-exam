@@ -30,6 +30,8 @@
 		B98CFAC528FBAAC60002D7B9 /* BookDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC428FBAAC60002D7B9 /* BookDetailListViewController.swift */; };
 		B98CFAC728FBE8E80002D7B9 /* BookTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC628FBE8E80002D7B9 /* BookTestView.swift */; };
 		B98CFAC928FBE9A10002D7B9 /* TestButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98CFAC828FBE9A10002D7B9 /* TestButtonView.swift */; };
+		B98CFACC28FC38E30002D7B9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFACB28FC38E30002D7B9 /* Realm */; };
+		B98CFACE28FC38E30002D7B9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B98CFACD28FC38E30002D7B9 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 			files = (
 				B98CFA9F28FB53CD0002D7B9 /* AbceedUILibrary in Frameworks */,
 				B98CFAA728FB57780002D7B9 /* Alamofire in Frameworks */,
+				B98CFACC28FC38E30002D7B9 /* Realm in Frameworks */,
+				B98CFACE28FC38E30002D7B9 /* RealmSwift in Frameworks */,
 				B98CFAAA28FB57B00002D7B9 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +163,8 @@
 				B98CFA9E28FB53CD0002D7B9 /* AbceedUILibrary */,
 				B98CFAA628FB57780002D7B9 /* Alamofire */,
 				B98CFAA928FB57B00002D7B9 /* AlamofireImage */,
+				B98CFACB28FC38E30002D7B9 /* Realm */,
+				B98CFACD28FC38E30002D7B9 /* RealmSwift */,
 			);
 			productName = "abceed-exam";
 			productReference = B98CFA8628FB525C0002D7B9 /* abceed-exam.app */;
@@ -192,6 +198,7 @@
 				B98CFA9D28FB53CD0002D7B9 /* XCRemoteSwiftPackageReference "abceed-UIComponents" */,
 				B98CFAA528FB57780002D7B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B98CFAA828FB57B00002D7B9 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				B98CFACA28FC38E30002D7B9 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = B98CFA8728FB525C0002D7B9 /* Products */;
 			projectDirPath = "";
@@ -478,6 +485,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		B98CFACA28FC38E30002D7B9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -495,6 +510,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B98CFAA828FB57B00002D7B9 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		B98CFACB28FC38E30002D7B9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98CFACA28FC38E30002D7B9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B98CFACD28FC38E30002D7B9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98CFACA28FC38E30002D7B9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
