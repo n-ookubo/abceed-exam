@@ -51,7 +51,7 @@ class BookCell : UICollectionViewCell {
     func configureCell(book: BookWrapper, layoutHandler: @escaping () -> Void) {
         bookData = book
         
-        let initialImageWidth = calcCellSize()
+        let initialImageWidth = calcImageWidth()
         imageWidth = initialImageWidth ?? BookListView.bookCellHeight
         
         if let url = URL(string: book.book.img_url) {
@@ -71,7 +71,7 @@ class BookCell : UICollectionViewCell {
                               
     }
     
-    private func calcCellSize() -> CGFloat? {
+    private func calcImageWidth() -> CGFloat? {
         guard let book = bookData else { return nil }
         return ImageSizeCache.getImageWidth(url: book.book.img_url, imageHeight: BookListView.bookCellHeight)
     }
