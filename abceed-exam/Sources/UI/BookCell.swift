@@ -54,21 +54,14 @@ class BookCell : UICollectionViewCell {
         let initialImageWidth = calcImageWidth()
         imageWidth = initialImageWidth ?? BookListView.bookCellHeight
         
-        if let url = URL(string: book.book.img_url) {
-            imageView.af.setImage(withURL: url, cacheKey: book.book.img_url, completion:{
-                (response: AFIDataResponse<UIImage>) in
-                if let img = response.value {
-                    ImageSizeCache.setImageSize(url: book.book.img_url, size: img.size)
-                    if initialImageWidth == nil {
-                        // reconfigure cell
-                        DispatchQueue.main.async {
-                            layoutHandler()
-                        }
-                    }
+        imageView.loadImageFromURL(string: book.book.img_url) { image in
+            if initialImageWidth == nil {
+                // reconfigure cell
+                DispatchQueue.main.async {
+                    layoutHandler()
                 }
-            })
-        }
-                              
+            }
+        }                              
     }
     
     private func calcImageWidth() -> CGFloat? {

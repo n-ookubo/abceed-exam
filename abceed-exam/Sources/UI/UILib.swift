@@ -5,6 +5,7 @@
 //  Created by Naoaki Okubo on 2022/10/16.
 //
 
+import AlamofireImage
 import Foundation
 import UIKit
 
@@ -49,5 +50,19 @@ class UILib {
             indicatorVisible = false
         }
         indicatorLock.unlock()
+    }
+}
+
+extension UIImageView {
+    func loadImageFromURL(string: String, successHandler: @escaping (UIImage)->Void) {
+        if let url = URL(string: string) {
+            self.af.setImage(withURL: url, cacheKey: string, completion:{
+                (response: AFIDataResponse<UIImage>) in
+                if let img = response.value {
+                    ImageSizeCache.setImageSize(url: string, size: img.size)
+                    successHandler(img)
+                }
+            })
+        }
     }
 }
